@@ -199,7 +199,7 @@ function AppContent() {
 function App() {
   return (
     <UserProvider>
-      <Router>
+      <Router basename="/MS-3">
         <AppContent />
       </Router>
     </UserProvider>
