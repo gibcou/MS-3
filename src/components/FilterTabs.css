@@ -1,0 +1,373 @@
+/* Filter Tabs */
+.filter-tabs {
+  width: 100%;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--imdb-dark-gray);
+  padding: 0.25rem;
+  border-radius: 6px;
+  border: 1px solid var(--imdb-gray);
+}
+
+.tab {
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--imdb-text-gray);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--imdb-white);
+  background: var(--imdb-gray);
+}
+
+.tab.active {
+  background: var(--imdb-yellow);
+  color: var(--imdb-black);
+  font-weight: 600;
+}
+
+/* Genre Filter */
+.genre-filter {
+  display: flex;
+  align-items: center;
+}
+
+.genre-filter-active {
+  display: flex;
+  align-items: center;
+}
+
+.genre-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--imdb-yellow);
+  color: var(--imdb-black);
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.remove-genre {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.remove-genre:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.genre-filter-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--imdb-gray);
+  border: 1px solid var(--imdb-light-gray);
+  border-radius: 4px;
+  color: var(--imdb-white);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.genre-filter-button:hover {
+  border-color: var(--imdb-yellow);
+  color: var(--imdb-yellow);
+  background: var(--imdb-light-gray);
+}
+
+.genre-filter-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Genre Form */
+.genre-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--imdb-dark-gray);
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--imdb-gray);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.genre-select {
+  padding: 0.5rem;
+  border: 1px solid var(--imdb-gray);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background: var(--imdb-gray);
+  color: var(--imdb-white);
+  min-width: 140px;
+}
+
+.genre-select:focus {
+  outline: none;
+  border-color: var(--imdb-yellow);
+  box-shadow: 0 0 0 2px rgba(245, 197, 24, 0.2);
+}
+
+.apply-genre,
+.cancel-genre {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.apply-genre {
+  background: var(--imdb-yellow);
+  color: var(--imdb-black);
+}
+
+.apply-genre:hover {
+  background: var(--imdb-yellow-hover);
+}
+
+.cancel-genre {
+  background: var(--imdb-gray);
+  color: var(--imdb-white);
+  border: 1px solid var(--imdb-light-gray);
+}
+
+.cancel-genre:hover {
+  background: var(--imdb-light-gray);
+  color: var(--imdb-white);
+}
+
+/* Year Filter */
+.year-filter {
+  display: flex;
+  align-items: center;
+}
+
+.year-filter-active {
+  display: flex;
+  align-items: center;
+}
+
+.year-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--imdb-yellow);
+  color: var(--imdb-black);
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.remove-year {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.remove-year:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.year-filter-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--imdb-gray);
+  border: 1px solid var(--imdb-light-gray);
+  border-radius: 4px;
+  color: var(--imdb-white);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.year-filter-button:hover {
+  border-color: var(--imdb-yellow);
+  color: var(--imdb-yellow);
+  background: var(--imdb-light-gray);
+}
+
+.year-filter-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Year Form */
+.year-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--imdb-dark-gray);
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--imdb-gray);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.year-select {
+  padding: 0.5rem;
+  border: 1px solid var(--imdb-gray);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background: var(--imdb-gray);
+  color: var(--imdb-white);
+  min-width: 120px;
+}
+
+.year-select:focus {
+  outline: none;
+  border-color: var(--imdb-yellow);
+  box-shadow: 0 0 0 2px rgba(245, 197, 24, 0.2);
+}
+
+.apply-year,
+.cancel-year {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.apply-year {
+  background: var(--imdb-yellow);
+  color: var(--imdb-black);
+}
+
+.apply-year:hover {
+  background: var(--imdb-yellow-hover);
+}
+
+.cancel-year {
+  background: var(--imdb-gray);
+  color: var(--imdb-white);
+  border: 1px solid var(--imdb-light-gray);
+}
+
+.cancel-year:hover {
+  background: var(--imdb-light-gray);
+  color: var(--imdb-white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tabs-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .tabs {
+    justify-content: center;
+  }
+  
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+  
+  .genre-filter {
+    justify-content: center;
+  }
+  
+  .genre-form {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .genre-select {
+    min-width: 120px;
+  }
+  
+  .year-filter {
+    justify-content: center;
+  }
+  
+  .year-form {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .year-select {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .tab {
+    padding: 0.625rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .genre-filter-button {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.85rem;
+  }
+  
+  .genre-form {
+    padding: 0.75rem;
+  }
+  
+  .year-filter-button {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.85rem;
+  }
+  
+  .year-form {
+    padding: 0.75rem;
+  }
+}

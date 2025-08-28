@@ -1,0 +1,277 @@
+/* Actor Filmography Page */
+.actor-filmography {
+  min-height: 100vh;
+  background: var(--imdb-black);
+  color: var(--imdb-text-light);
+  padding-top: 2rem;
+}
+
+.actor-filmography .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Loading and Error States */
+.actor-filmography-loading,
+.actor-filmography-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  gap: 1rem;
+}
+
+.actor-filmography-loading .spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--imdb-gray);
+  border-top: 3px solid var(--imdb-yellow);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.actor-filmography-error h2 {
+  color: var(--imdb-yellow);
+  margin-bottom: 0.5rem;
+}
+
+/* Back Button */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--imdb-dark-gray);
+  color: var(--imdb-text-light);
+  border: 1px solid var(--imdb-gray);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.back-button:hover {
+  background: var(--imdb-gray);
+  color: var(--imdb-yellow);
+  border-color: var(--imdb-yellow);
+  transform: translateY(-1px);
+}
+
+.back-button svg {
+  flex-shrink: 0;
+}
+
+/* Actor Header */
+.actor-header {
+  margin-bottom: 3rem;
+}
+
+.actor-info {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.actor-photo {
+  flex-shrink: 0;
+  width: 200px;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--imdb-dark-gray);
+  border: 2px solid var(--imdb-gray);
+}
+
+.actor-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.actor-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--imdb-gray);
+  background: var(--imdb-dark-gray);
+}
+
+.actor-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.actor-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--imdb-text-light);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.actor-birthday {
+  font-size: 1rem;
+  color: var(--imdb-text-muted);
+  margin: 0 0 1.5rem 0;
+}
+
+.actor-birthday strong {
+  color: var(--imdb-yellow);
+}
+
+.actor-biography {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--imdb-text-light);
+  margin: 0;
+}
+
+/* Movies Section */
+.movies-section {
+  margin-top: 3rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--imdb-yellow);
+  margin: 0;
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sort-controls label {
+  font-size: 0.9rem;
+  color: var(--imdb-text-muted);
+  font-weight: 500;
+}
+
+.sort-select {
+  padding: 0.5rem 0.75rem;
+  background: var(--imdb-dark-gray);
+  color: var(--imdb-text-light);
+  border: 1px solid var(--imdb-gray);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sort-select:hover,
+.sort-select:focus {
+  border-color: var(--imdb-yellow);
+  outline: none;
+}
+
+/* Movies Grid */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.no-movies {
+  text-align: center;
+  padding: 3rem;
+  color: var(--imdb-text-muted);
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .actor-filmography .container {
+    padding: 0 1rem;
+  }
+  
+  .actor-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .actor-photo {
+    width: 150px;
+    height: 225px;
+  }
+  
+  .actor-name {
+    font-size: 2rem;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .actor-filmography {
+    padding-top: 1rem;
+  }
+  
+  .back-button {
+    margin-bottom: 1.5rem;
+  }
+  
+  .actor-header {
+    margin-bottom: 2rem;
+  }
+  
+  .actor-photo {
+    width: 120px;
+    height: 180px;
+  }
+  
+  .actor-name {
+    font-size: 1.8rem;
+  }
+  
+  .actor-biography {
+    font-size: 0.9rem;
+  }
+  
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
